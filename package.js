@@ -1,5 +1,5 @@
 Package.describe({
-  name: "mhwheeler:google-fake",
+  name: "emmerge:google-fake",
   summary: "A fake for use in testing. Fakes the oauth calls amongst other APIs.",
   version: "0.0.4",
   git: "https://github.com/xolvio/meteor-google-fake",
