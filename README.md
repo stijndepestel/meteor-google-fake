@@ -1,16 +1,17 @@
-# github-stub
+# google-fake
 A stub for use in testing Meteor apps. Stubs the oauth calls and allows you to fake stub more.
 
-##Usage:
+## Usage
 
-If you are using GitHub authentication, add this package like this:
+If you are using Google authentication (`accounts-google`), add this package like this:
 
-`meteor add xolvio:github-stub`
+`meteor add emmerge:google-fake`
 
-Your app will no longer authenticate with GitHub in development mode and will authenticate with
+Your app will no longer authenticate with Google in development mode and will authenticate with
 a fake user even if you do not have an internet connection. This package does not affect production
 as it is a `debugOnly` package.
 
-This package is an example of how to use
-[xolvio:http-interceptor](https://github.com/xolvio/meteor-http-interceptor) to test your app.
+## About
+
+This package is based on and forked from [xolvio:github-fake](https://github.com/xolvio/meteor-github-stub).
 

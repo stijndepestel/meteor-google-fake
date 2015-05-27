@@ -14,7 +14,7 @@ Package.oauth.OAuth.launchLogin = function (options) {
 
 
 var _getFakeOptionsFor = {
-  'github': function (options) {
+  'google': function (options) {
     var loopbackLoginUrl = new URL(options.loginUrl);
 
     // change the protocol to http so we can run a loopback without extra server
