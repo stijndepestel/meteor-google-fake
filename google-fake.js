@@ -18,9 +18,7 @@ Router.route('fake.accounts.google.com/o/oauth2/token', function () {
   this.response.writeHead(200, {
     'Content-Type': 'application/json; charset=utf-8'
   });
-  console.log('response about to end');
   this.response.end(JSON.stringify(cannedResponse));
-  console.log('ended repsonse');
 }, {where: 'server'});
 
 Router.route('fake.www.googleapis.com/oauth2/v1/userinfo', function () {
