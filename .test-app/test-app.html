@@ -1,0 +1,22 @@
+<head>
+  <title>Google-Fake Test App</title>
+</head>
+
+<body>
+  <h1>Google-Fake Test App</h1>
+  <p>{{> loginButtons}}</p>
+  {{> userContent}}
+</body>
+
+<template name="userContent">
+  <p>
+    {{#if currentUser}}
+      <span class="logged-in-message">
+        Welcome <span class="current-user-name">{{currentUser.profile.name}}</span>,
+        You are logged in!
+      </span>
+    {{else}}
+      <span class="logged-out-message">You need to log in.</span>
+    {{/if}}
+  </p>
+</template>
