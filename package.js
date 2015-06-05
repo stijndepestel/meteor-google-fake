@@ -1,7 +1,7 @@
 Package.describe({
   name: "emmerge:google-fake",
   summary: "A fake for use in testing. Fakes the oauth calls amongst other APIs.",
-  version: "0.0.4",
+  version: "0.0.4.1",
   git: "https://github.com/xolvio/meteor-google-fake",
   debugOnly: true
 });
