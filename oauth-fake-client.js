@@ -36,7 +36,6 @@ var _getFakeOptionsFor = {
     // a version for PhantomJS which has no function URL()
     else {
       loopbackLoginUrl = options.loginUrl.replace(/https?:\/\//, Meteor.absoluteUrl()+'fake.');
-      console.log(loopbackLoginUrl);
     }
     // override the loginUrl in the options
     options.loginUrl = loopbackLoginUrl.toString();
