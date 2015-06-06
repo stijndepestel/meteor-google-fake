@@ -1,4 +1,4 @@
-# google-fake
+# google-fake [ ![Codeship Status for emmerge/meteor-google-fake](https://codeship.com/projects/d98d1cb0-ee0b-0132-7c60-62ac293d1c08/status?branch=master)](https://codeship.com/projects/84188)
 A stub for use in testing Meteor apps. Stubs the oauth calls and allows you to fake stub more.
 
 ## Usage
