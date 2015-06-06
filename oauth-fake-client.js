@@ -15,19 +15,29 @@ Package.oauth.OAuth.launchLogin = function (options) {
 
 var _getFakeOptionsFor = {
   'google': function (options) {
-    var loopbackLoginUrl = new URL(options.loginUrl);
+    var loopbackLoginUrl;
 
-    // change the protocol to http so we can run a loopback without extra server
-    // configuration
-    loopbackLoginUrl.protocol = 'http';
+    if (typeof URL === "function") {
 
-    // precede the host with fake
-    loopbackLoginUrl.pathname =
-      'fake.' + loopbackLoginUrl.host + loopbackLoginUrl.pathname;
+      loopbackLoginUrl = new URL(options.loginUrl);
 
-    // and loop back to the current app
-    loopbackLoginUrl.host = new URL(Meteor.absoluteUrl()).host;
+      // change the protocol to http so we can run a loopback without extra server
+      // configuration
+      loopbackLoginUrl.protocol = 'http';
 
+      // precede the host with fake
+      loopbackLoginUrl.pathname =
+        'fake.' + loopbackLoginUrl.host + loopbackLoginUrl.pathname;
+
+      // and loop back to the current app
+      loopbackLoginUrl.host = new URL(Meteor.absoluteUrl()).host;
+
+    }
+    // a version for PhantomJS which has no function URL()
+    else {
+      loopbackLoginUrl = options.loginUrl.replace(/https?:\/\//, Meteor.absoluteUrl()+'fake.');
+      console.log(loopbackLoginUrl);
+    }
     // override the loginUrl in the options
     options.loginUrl = loopbackLoginUrl.toString();
 
