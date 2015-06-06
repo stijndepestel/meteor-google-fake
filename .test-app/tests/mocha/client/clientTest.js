@@ -19,7 +19,7 @@ if (!(typeof MochaWeb === 'undefined')){
     describe("logged in", function() {
       before(function(done) {
         $('#login-buttons-google').click();
-        Meteor.setTimeout(done, 500); // is there a better way to do this?
+        Meteor.setTimeout(done, 1000); // is there a better way to do this?
       });
       it("should have a userId", function() {
         chai.assert.isNotNull(Meteor.userId());
