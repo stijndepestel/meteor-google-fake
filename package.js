@@ -7,9 +7,9 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
-  api.use('google@1.1.5', ['client', 'server']);
-  api.use(['xolvio:http-interceptor@0.5.1'], ['server']);
-  api.use(['iron:router@1.0.9'], ['server']);
+  api.use('google@1.1.2', ['client', 'server']);
+  api.use(['xolvio:http-interceptor@0.4.0'], ['server']);
+  api.use(['iron:router@1.0.6'], ['server']);
   api.add_files('oauth-fake-client.js', 'client');
   api.add_files('google-fake.js', ['server']);
 });
