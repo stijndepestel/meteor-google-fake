@@ -34,6 +34,16 @@ Router.route('fake.www.googleapis.com/oauth2/v1/userinfo', function () {
   this.response.end(JSON.stringify(cannedResponse));
 }, {where: 'server'});
 
+Router.route('fake.www.googleapis.com/oauth2/v1/tokeninfo', function () {
+  var cannedResponse = {
+    scope: 'profile'
+  };
+  this.response.writeHead(200, {
+    'Content-Type': 'application/json; charset=utf-8'
+  });
+  this.response.end(JSON.stringify(cannedResponse));
+}, {where: 'server'});
+
 
 _fixIronRouterBug = function (query) {
   if (query.redirect_uri.indexOf('http:/') !== -1 && query.redirect_uri.indexOf('http://') === -1) {

@@ -1,7 +1,7 @@
 Package.describe({
   name: "emmerge:google-fake",
   summary: "A fake for use in testing. Fakes the oauth calls amongst other APIs.",
-  version: "0.0.4_2",
+  version: "0.0.4_3",
   git: "https://github.com/emmerge/meteor-google-fake",
   debugOnly: true
 });
