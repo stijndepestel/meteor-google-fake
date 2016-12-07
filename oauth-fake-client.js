@@ -1,12 +1,13 @@
 // intercept the URL out to the oauth service
+
 var _launchLogin = Package.oauth.OAuth.launchLogin;
 Package.oauth.OAuth.launchLogin = function (options) {
 
   var args = arguments;
 
   // Make sure a fake options implementation exists for the login service
-  if (_getFakeOptionsFor[options.loginService]) {
-    args = [_getFakeOptionsFor[options.loginService](options)];
+  if ( _getFakeOptionsFor[ options.loginService ] ) {
+    args = [ _getFakeOptionsFor[ options.loginService ](options) ];
   }
 
   return _launchLogin.apply(this, args);
@@ -17,7 +18,7 @@ var _getFakeOptionsFor = {
   'google': function (options) {
     var loopbackLoginUrl;
 
-    if (typeof URL === "function") {
+    if ( typeof URL === "function" ) {
 
       loopbackLoginUrl = new URL(options.loginUrl);
 
@@ -35,7 +36,7 @@ var _getFakeOptionsFor = {
     }
     // a version for PhantomJS which has no function URL()
     else {
-      loopbackLoginUrl = options.loginUrl.replace(/https?:\/\//, Meteor.absoluteUrl()+'fake.');
+      loopbackLoginUrl = options.loginUrl.replace(/https?:\/\//, Meteor.absoluteUrl() + 'fake.');
     }
     // override the loginUrl in the options
     options.loginUrl = loopbackLoginUrl.toString();
