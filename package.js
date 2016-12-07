@@ -1,7 +1,7 @@
 Package.describe({
   name: "stijndepestel:google-fake",
   summary: "A fake for use in testing. Fakes the oauth calls amongst other APIs.",
-  version: "0.0.5",
+  version: "0.0.6",
   git: "https://github.com/stijndepestel/meteor-google-fake",
   debugOnly: true
 });

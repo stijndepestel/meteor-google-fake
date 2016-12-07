@@ -58,7 +58,7 @@ service-configuration@1.0.11
 spacebars@1.0.12
 spacebars-compiler@1.0.12
 stijndepestel:google-fake@0.0.5
-stijndepestel:http-interceptor@0.5.0
+stijndepestel:http-interceptor@0.6.0
 templating@1.2.13
 templating-tools@1.0.4
 tracker@1.1.1
